@@ -9,7 +9,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Code, Key, ArrowRightLeft, LayoutDashboard, ChevronRight, Check } from 'lucide-react'
 import { HiLightningBolt, HiCog, HiChartBar, HiShieldCheck } from 'react-icons/hi'
-import AdSense from '@/components/AdSense'
+import AdBanner from "@/components/AdBanner";
+
 import Script from 'next/script'
 
 const MotionCard = motion(Card)
@@ -73,9 +74,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* AdSense after Hero Section */}
+      {/* AdBanner after Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
-        <AdSense />
+        <AdBanner 
+          dataAdFormat="auto"
+          dataFullWidthResponsive={true}
+          dataAdSlot="6211077404"
+        />
       </div>
 
       {/* Features Section */}
@@ -187,9 +192,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* AdSense after How It Works Section */}
+      {/* AdBanner after How It Works Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
-        <AdSense />
+        {/* <AdBanner 
+          dataAdFormat="auto"
+          dataFullWidthResponsive={true}
+          dataAdSlot="6211077404"
+        /> */}
       </div>
 
       {/* Testimonials Section */}
@@ -304,9 +313,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* AdSense after Pricing Section */}
+      {/* AdBanner after Pricing Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
-        <AdSense />
+        {/* <AdBanner
+          dataAdFormat="auto"
+          dataFullWidthResponsive={true}
+          dataAdSlot="6211077404"
+        /> */}
       </div>
 
       {/* Call-to-Action Section */}

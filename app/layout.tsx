@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from '@clerk/nextjs'
 import { Navbar } from '@/components/Navbar'
-import Script from 'next/script'
+import AdSense from "@/components/AdSense";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,12 +30,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <head>
-          <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916766114053705"
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
+          <AdSense pId="ca-pub-7916766114053705"/>
         </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
