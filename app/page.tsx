@@ -9,6 +9,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Code, Key, ArrowRightLeft, LayoutDashboard, ChevronRight, Check } from 'lucide-react'
 import { HiLightningBolt, HiCog, HiChartBar, HiShieldCheck } from 'react-icons/hi'
+import AdSense from '@/components/AdSense'
+import Script from 'next/script'
 
 const MotionCard = motion(Card)
 
@@ -34,6 +36,13 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916766114053705"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
+
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -63,6 +72,11 @@ export default function LandingPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* AdSense after Hero Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
+        <AdSense />
+      </div>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -173,6 +187,11 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* AdSense after How It Works Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
+        <AdSense />
+      </div>
+
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -274,7 +293,7 @@ export default function LandingPage() {
                   <li className="flex items-center"><Check className="mr-2 text-green-500" /> Advanced Security</li>
                   <li className="flex items-center"><Check className="mr-2 text-green-500" /> Dedicated Support</li>
                   <li className="flex items-center"><Check className="mr-2 text-green-500" /> Custom Integrations</li>
-                  <li className="flex items-center"><Check className="mr-2 text-green-500" /> SLA</li>
+                  <li className="flex items-center"><Check  className="mr-2 text-green-500" /> SLA</li>
                 </ul>
               </CardContent>
               <CardFooter>
@@ -284,6 +303,11 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* AdSense after Pricing Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
+        <AdSense />
+      </div>
 
       {/* Call-to-Action Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600 text-white">
