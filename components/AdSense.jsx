@@ -1,21 +1,14 @@
-'use client'
-
-import { useEffect } from 'react'
-
-declare global {
-  interface Window {
-    adsbygoogle: any[];
-  }
-}
+'use client';
+import { useEffect } from 'react';
 
 export default function AdSense() {
   useEffect(() => {
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({})
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (err) {
-      console.error(err)
+      console.error('Adsense error:', err);
     }
-  }, [])
+  }, []);
 
   return (
     <ins
@@ -26,5 +19,5 @@ export default function AdSense() {
       data-ad-format="auto"
       data-full-width-responsive="true"
     />
-  )
+  );
 }
